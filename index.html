@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Personal linktree page"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal linktree page" />
   <title>Honza 😈</title>
-  <link rel="stylesheet" href="fa/css/all.min.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23333'/%3E%3Ctext x='50' y='70' font-size='60' text-anchor='middle' fill='%23fff' font-family='Arial'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23333'/%3E%3Ctext x='50' y='70' font-size='60' text-anchor='middle' fill='%23fff' font-family='Arial'%3EH%3C/text%3E%3C/svg%3E">
   <style>
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    html{
+    html {
       background-color: #010101;
     }
 
@@ -29,10 +29,7 @@
 
     .background-image {
       position: fixed;
-      top: 0; 
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background: #000 url("img/backgroundLow.webp") center center/cover no-repeat;
       filter: brightness(0.5);
       z-index: -1;
@@ -46,19 +43,19 @@
     }
 
     .share-button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background-color: rgba(255, 255, 255, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        padding: 8px 15px;
-        border-radius: 20px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: background-color 0.3s;
-        z-index: 5;
-      }
-    
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      z-index: 5;
+    }
+
     .share-button:hover {
       background-color: rgba(255, 255, 255, 0.3);
     }
@@ -70,7 +67,7 @@
       border-radius: 50%;
       border: 3px solid #fff;
       margin-top: 60px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       animation: fadeInDown 0.7s ease forwards;
       opacity: 0;
       transform: translateY(-30px);
@@ -88,6 +85,7 @@
       transform: translateY(30px);
       animation-delay: 0.3s;
     }
+
     .verified-icon {
       font-size: 0.8em;
       color: #1da1f2;
@@ -116,9 +114,11 @@
       opacity: 0;
       transform: translateY(30px);
     }
+
     .section-title:nth-of-type(1) {
       animation-delay: 0.7s;
     }
+
     .section-title:nth-of-type(2) {
       animation-delay: 0.8s;
     }
@@ -131,23 +131,51 @@
       list-style: none;
       padding: 0;
     }
+
     .link-list li {
       margin: 10px 0;
       opacity: 0;
       transform: translateY(30px);
       animation: fadeInUp 0.7s ease forwards;
     }
-    .link-list li:nth-child(1) { animation-delay: 0.8s; }
-    .link-list li:nth-child(2) { animation-delay: 0.9s; }
-    .link-list li:nth-child(3) { animation-delay: 1.0s; }
-    .link-list li:nth-child(4) { animation-delay: 1.1s; }
-    .link-list li:nth-child(5) { animation-delay: 1.2s; }
-    .link-list li:nth-child(6) { animation-delay: 1.3s; }
-    .link-list li:nth-child(7) { animation-delay: 1.4s; }
-    .link-list li:nth-child(8) { animation-delay: 1.5s; }
+
+    .link-list li:nth-child(1) {
+      animation-delay: 0.8s;
+    }
+
+    .link-list li:nth-child(2) {
+      animation-delay: 0.9s;
+    }
+
+    .link-list li:nth-child(3) {
+      animation-delay: 1.0s;
+    }
+
+    .link-list li:nth-child(4) {
+      animation-delay: 1.1s;
+    }
+
+    .link-list li:nth-child(5) {
+      animation-delay: 1.2s;
+    }
+
+    .link-list li:nth-child(6) {
+      animation-delay: 1.3s;
+    }
+
+    .link-list li:nth-child(7) {
+      animation-delay: 1.4s;
+    }
+
+    .link-list li:nth-child(8) {
+      animation-delay: 1.5s;
+    }
 
     .link {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       width: 80%;
       padding: 12px 0;
       text-decoration: none;
@@ -158,12 +186,35 @@
       font-weight: bold;
       transition: background-color 0.3s, transform 0.3s;
     }
+
     .link:hover {
       background-color: rgba(255, 255, 255, 0.2);
       transform: translateY(-2px);
     }
+
     .link i {
       margin-right: 8px;
+    }
+
+    .fa-svg {
+      width: 1.25em;
+      height: 1em;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      vertical-align: middle;
+    }
+
+    .twitter {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .lock-icon {
+      width: 0.85em;
+      height: auto;
+      filter: brightness(0) invert(1);
+      margin-top: -3px;
     }
 
     @keyframes fadeInDown {
@@ -172,6 +223,7 @@
         transform: translateY(0);
       }
     }
+
     @keyframes fadeInUp {
       to {
         opacity: 1;
@@ -180,6 +232,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="background-image" id="bg"></div>
@@ -187,7 +240,7 @@
   <div class="container">
     <div class="share-button">Share me!</div>
 
-    <img id="profileImage" src="img/profileLow.webp" alt="Meee!" class="profile-image"/>
+    <img id="profileImage" src="img/profileLow.webp" alt="Meee!" class="profile-image" />
 
     <h1 class="username">
       Master Honza
@@ -195,10 +248,10 @@
     </h1>
 
     <p class="description">
-      26 years old sadist 😈 
-    </br>
+      26 years old sadist 😈
+      </br>
       Everything NSFW of course! 🔞😉
-    </br>
+      </br>
       Master of drone Dafy. Leather and latex lover 😋
       Sometimes pup 😜
     </p>
@@ -207,7 +260,7 @@
     <ul class="link-list">
       <li>
         <a class="link" href="https://slaveDafy.cz" target="_blank">
-          <i class="fa-solid fa-microchip"></i> Dafy
+          <img src="img/microchip.svg" class="fa-svg" alt="microchip"> Dafy
         </a>
       </li>
     </ul>
@@ -216,12 +269,13 @@
     <ul class="link-list">
       <li>
         <a class="link" href="https://bsky.app/profile/masterhonza.cz" target="_blank">
-          <i class="fas fa-feather-alt"></i> Bluesky
+          <img src="img/feather.svg" class="fa-svg" alt="feather"> Bluesky
         </a>
       </li>
       <li>
         <a class="link" href="https://twitter.com/Master_Honza" target="_blank">
-          <i class="fab fa-twitter"></i> Twitter  <i class="fa-solid fa-lock"></i>
+          <img src="img/twitter.svg" class="fa-svg" alt="twitter">
+          <div class="twitter">Twitter<img src="img/lock.svg" class="lock-icon" alt="lock"></div>
         </a>
       </li>
     </ul>
@@ -229,57 +283,33 @@
     <ul class="link-list">
       <li>
         <a class="link" href="https://jsem-pes.cz/clen/ijst" target="_blank">
-          <i class="fas fa-paw"></i> jsem-pes.cz
+          <img src="img/paw.svg" class="fa-svg" alt="paw"> jsem-pes.cz
         </a>
       </li>
     </ul>
   </div>
 
-  <script async>
-    document.addEventListener("DOMContentLoaded", function() {
-      const bgImg = new Image();
-      bgImg.src = "img/background.webp";
-      bgImg.onload = function() {
-        document.getElementById("bg").style.backgroundImage = "url('img/background.webp')";
-      };
-    });
-  </script>
-
-  <script async>
-    document.addEventListener("DOMContentLoaded", function() {
-      const profileImage = document.getElementById("profileImage");
-      const highResSrc = "img/profile.webp";
-      const highResImage = new Image();
-      highResImage.src = highResSrc;
-      highResImage.onload = function() {
-        profileImage.style.transition = 'opacity 0.2s';
-        profileImage.style.opacity = '0';
-        setTimeout(function() {
-          profileImage.src = highResSrc;
-          profileImage.style.opacity = '1';
-        }, 50);
-      };
-    });
-    </script>
-
-
   <script>
-
-    document.querySelector('.share-button').addEventListener('click', function(event){
+    document.querySelector('.share-button').addEventListener('click', function (e) {
       if (navigator.share) {
         navigator.share({
-          title: document.title,
-          url: window.location.href
-        }).catch(function(err) {
-          console.error('Error při sdílení:', err);
-        });
-      } else {
-        ;
+          title: document.title, url: window.location.href
+        }).catch(err => console.error('Share error:', err));
       }
-      event.stopPropagation();
+      e.stopPropagation();
     });
 
+    window.addEventListener("load", () => {
+      const bg = new Image();
+      bg.src = "img/background.webp";
+      bg.onload = () => document.getElementById("bg").style.backgroundImage = `url(${bg.src})`;
+      const prof = document.getElementById("profileImage");
+      const highRes = new Image();
+      highRes.src = "img/profile.webp";
+      highRes.onload = () => prof.src = highRes.src;
+    });
 
   </script>
 </body>
+
 </html>
